@@ -1,0 +1,99 @@
+/* Font Faces */
+@font-face {
+  font-family: "Telegraf";
+  src: url("../assets/fonts/Telegraf UltraLight 200.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("../assets/fonts/TelegrafRegular_272984568a25d8528fe2de8b20b29011.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  src: url("../assets/fonts/Telegraf UltraBold 800.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TimesClassic";
+  src: url("../assets/fonts/times.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Dark Mode (Default) — From DarkMode.pdf */
+:root,
+[data-theme="dark"] {
+  --bg-canvas: #000000;
+  --bg-surface: #333333;
+  --bg-elevated: #1c1c1e;
+  --text-primary: #e4e4e4;
+  --text-secondary: #d1d1d6;
+  --text-muted: #8e8e93;
+  --accent: #fd105e;
+  --accent-hover: #e00d52;
+  --accent-glow: rgba(253, 16, 94, 0.25);
+  --border-color: rgba(209, 209, 214, 0.14);
+  --glass-bg: color-mix(in oklch, rgb(51 51 51 / 55%) 78%, transparent);
+  --glass-shadow: inset 0 1px 0 rgb(255 255 255 / 12%), 0 12px 40px rgb(0 0 0 / 50%);
+}
+
+/* Light Mode — From LightMode.pdf */
+[data-theme="light"] {
+  --bg-canvas: #f2f2f7;
+  --bg-surface: #ffffff;
+  --bg-elevated: #e5e5ea;
+  --text-primary: #1c1c1e;
+  --text-secondary: #333333;
+  --text-muted: #8e8e93;
+  --accent: #fd105e;
+  --accent-hover: #d90b4f;
+  --accent-glow: rgba(253, 16, 94, 0.18);
+  --border-color: rgba(28, 28, 30, 0.12);
+  --glass-bg: color-mix(in oklch, rgb(255 255 255 / 78%) 85%, transparent);
+  --glass-shadow: inset 0 1px 0 rgb(255 255 255 / 80%), 0 12px 40px rgb(0 0 0 / 8%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: "Telegraf", system-ui, sans-serif;
+  font-weight: 400;
+  transition: background 0.35s ease, color 0.35s ease;
+  overflow-x: hidden;
+}
+
+h1, h2, .brand-heading {
+  font-family: "Telegraf", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.editorial-serif {
+  font-family: "TimesClassic", "Times New Roman", serif;
+}
+
+.ultra-light {
+  font-weight: 200;
+}
+
+.hidden {
+  display: none !important;
+}
+
+strong, b {
+  font-family: "Telegraf", sans-serif;
+  font-weight: 800;
+}
